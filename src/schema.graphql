@@ -1,0 +1,20 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    notes: [Note]!
+    note(id: Int!): Note!
+}
+
+type Mutation {
+    addNote(title: String!, content: String!): Note!
+    editNote(id: Int!, title: String, content: String): Note!
+}
+
+type Note {
+    id: Int!
+    title: String!
+    content: String!
+}
